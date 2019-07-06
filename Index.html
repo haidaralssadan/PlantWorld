@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Plant World</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./styles/used.css">
+</head>
+<body>
+<!-- Navigation Bar, only navbar class -->
+<div class="navbar">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+</div>
+<!-- Note, dos NOT have any special style-->
+<div style="background:yellow;padding:5px">
+  <h4 style="text-align:center; border: 1px solid;">Welcome to our store web site</h4>
+</div>
+<!-- Header, dos NOT have any special style -->
+<div class="header">
+  <h1>Plant World</h1>
+  <p>Now we focuse on the <b>Golden Ivy Plant</b> only.</p>
+  <p>Support us so we can expand our products.</p>
+</div>
+
+<!-- The flexible grid (content), row class flex with wrap -->
+<div class="wrapper">
+  <div class="side">
+    
+    <div class="test1">
+      <h2>About Me</h2>
+      <h5>Photo of me:</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <h3>More Text</h3>
+      <p>Lorem ipsum dolor sit ame.</p>
+    </div>
+
+    <div class="test2">
+      <div class="fakeimg" style="height:60px;">Image</div><br>
+      <div class="fakeimg" style="height:60px;">Image</div><br>
+      <div class="fakeimg" style="height:60px;">Image</div>
+    </div>
+  </div>
+
+  <div class="slideshow-container" > <!-- This is slideshow-container -->
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="mySlides fade"> <!-- 1st Image  -->
+      <div class="numbertext">1 / 3</div>
+      <img src="./images/img_ppatio.jpg">
+      <!-- <div class="caption">Caption Text</div> -->
+    </div>
+    <div class="mySlides fade">  <!-- 2nd Image  -->
+      <div class="numbertext">2 / 3</div>
+      <img src="./images/img_pshelves.jpg">
+      <!-- <div class="caption">Caption Two</div> -->
+    </div>
+    <div class="mySlides fade">
+      <!-- 3rd Image  -->
+      <div class="numbertext">3 / 3</div>
+      <img src="./images/img_phwin.jpg">
+      
+    </div>
+    <div class="caption">Caption One</div>
+    <div class="dotContainer"><!-- Dots DIV  -->
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div> <!-- End of Dots DIV  -->
+
+   </div> <!-- End of Skideshow-container DIV  -->
+
+  <!-- <div class="main">
+    <h2>TITLE HEADING 1</h2>
+    <h5>Title description, Dec 7, 2017</h5>
+
+    
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br> -->
+
+
+
+    <!-- <h2>TITLE HEADING 2</h2>
+    <h5>Title description, Sep 2, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> -->
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+<script src="./scripts/scripts.js"></script>
+</body>
+</html>
