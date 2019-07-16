@@ -57,9 +57,5 @@ img {vertical-align: middle;}
   flex-flow: row wrap; /* Need to check effect*/
 }}
 
-@media only screen and (orientation: landscape) {
-  
-}
-
 
 
