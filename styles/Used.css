@@ -5,10 +5,10 @@
 }
 
 /* Style the body */
-body {
+.mybody {
   font-family: Arial 1em;
   margin: 0;
-  background-color: rgb(141, 107, 180);
+  background-color: rgb(164, 180, 107);
 }
 
   .note {
@@ -25,7 +25,8 @@ body {
     width: 90%;
     margin: auto;
     background-color: #333;
-    margin-top: 0px;} 
+    margin-top: 0px;
+  z-index: 3;} 
 
   /* Style the navigation bar links */
 .navbar a {
@@ -39,21 +40,15 @@ body {
   background-color: #ddd;
   color: black;}
 
-  .name {
-    display: none;  }
+  .name {    display: none;  }
 
   /* Header/logo Title */
 .header {
     padding: 10px;
     text-align: center;
     color: white;
-    background: #1abc9c;
+    background: #0f9c80;
     width: 90%;
-    margin: auto;}
-
-.header div {
-    width: 90%;
-    text-align: center;
     margin: auto;}
   
   /* Column container */
@@ -62,36 +57,28 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  padding: 5px 20px;
-  /* background-color:rgb(32, 178, 76); */
-  /* border: 1px solid red;*/} 
+  padding: 5px 20px;} 
 
-  .test1 {padding:0 ;}
+  .section1 {padding:0 ;}
 
-  .test2 p {margin: 10px 0;}
+  .section2 p {margin: 10px 0;}
 
-  /* .test1 h2, test2 h2 {font-size: 10px;} */
+  /* .section1 h2, section2 h2 {font-size: 10px;} */
 
 /* Create two unequal columns that sits next to each other */
 /* Main column */
-.main {
-  padding: 20px;
+.main {  padding: 20px;
   /* flex: 70%; */
-  /* background-color: white; */  }
+ }
 
-/* Sidebar/left column */
-.side {
+/* aboutbar/left column */
+.about {
   /* flex: 30%; */
-  /* background-color: #972876; */
-  /* border: 1px solid blue; */
   padding: 10px 10px;
-  width: 100%}
+  width: 100%
+}
 
-  .mySlides {
-    text-align:center; 
-    display: none;
-    /* background-color:rgb(110, 151, 97);
-  border: 3px solid rgb(0, 0, 0);*/} 
+.mySlides {text-align:center;}
 
 img {
     vertical-align: middle;
@@ -101,37 +88,29 @@ img {
     margin: auto;
     display: block;
     padding: 5px 5px;
-    object-fit:cover;
-    /* margin-left: auto;
-    margin-right: auto; 
-    border: 5px solid rgb(203, 206, 18);*/}
+    object-fit:cover;}
 
 /* Fake image, just for this example */
-.fakeimg {
-  /* background-color: #aaa; */
+.aboutimg {
   width: 100%;
   padding: 0px;}
 
- /* Caption text for images*/
- .caption {
+ /* imgCaption text for images*/
+ .imgCaption {
   color: #f2f2f2;
   font-size: 1em;
   padding: 8px 12px;
-  /* margin: auto; */
   position: relative;
-  /* top: -3em; */
-  /* bottom: 100px; */
   width: 100%;
   text-align: center;} 
 
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  position: absolute;
-  /* top: -100; */
+  top: -50%;
+  position: relative;
   width: auto;
   padding: 16px;
-  /* margin-top: 50%; */
   color: white;
   font-weight: bold;
   font-size: 20px;
@@ -141,9 +120,9 @@ img {
   z-index: 2;}
 
 /* Position the "next button" to the right */
-.next {
-  right: 20px;
-  border-radius: 3px 0 0 3px;}
+/* .next {
+  right: -93%;
+  border-radius: 3px 0 0 3px;} */
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
@@ -151,7 +130,7 @@ img {
 
 /* Number text (1/3 etc) */
 .numbertext {
-  font-size: 1em;
+  font-size: 1.6em;
   padding: 20px 12px 5px;
   color: #f2f2f2;
   position: relative;
@@ -178,7 +157,7 @@ img {
   background-color: #717171;}
 
 /* Fading animation */
-.fade {
+.imgFade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
@@ -196,19 +175,40 @@ img {
 
 /* Footer */
 .footer {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   background: #ddd;}
 
+  .footList {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+
+  }
+
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+  }
+  /* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+  
 
 /* --------------------------------------------------------------------- Media Queries  */
   /* 1 On smaller screens, decrease text size */
   @media only screen and (max-width: 300px) {
     .prev, .next, .text, .navbar, .note, .name {font-size: 10px}
     .wrapper {padding: 5px 0;}
-    .fakeimg {padding: 0;}
-    .test1 h2, .test2 h2 {font-size: 1.2em;}
-    .header {padding: 10px;}
+    .aboutimg {padding: 0;}
+    .section1 h2, .section2 h2 {font-size: 1.2em;}
+    /* .header {padding: 10px;} */
     .dot {margin: 0 5px;}
   }
 
@@ -222,16 +222,18 @@ img {
     position: sticky;
     justify-content: space-evenly;}
 
-  .side {
-    padding: 20px;
-    width: 90%;}
+  .about {
+    /* padding: 20px; */
+    width: 100%;}
 
-  .header div {
-    font-size: 1.2em;
-  }
+  .header {font-size: 1.2em;}
 
-  .test1 p, .test2 p {
+  .section1 p, .section2 p {
     font-size: 1.2em;  }
+
+  .imgCaption {
+    font-size: 1.5em;
+    padding: 15px 12px 20px;}
 } 
 
 /* 3 Medium devices (landscape tablets, 768px and up) */
@@ -241,16 +243,16 @@ img {
     width: 80%;
   }
 
-  .side {
+  .about {
     display: flex;
     padding-right: 20px;
     padding-left: 0;  }
   
-    .test1 {
+    .section1 {
     flex: 60%;
     padding: 20px;}
   
-    .test2 {
+    .section2 {
     flex: 40%;
     padding: 20px;}
   
@@ -258,8 +260,8 @@ img {
     font-size: 1.5em;
     padding: 20px 12px 5px;}
 
-    .caption {
-      font-size: 1.5em;
+    .imgCaption {
+      font-size: 2em;
       padding: 15px 12px 20px;}
 
     .dot {
@@ -278,24 +280,25 @@ img {
 /* ----- Media queries section -------- */
 /* 4 Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .wrapper {   
-      flex-direction: row;  }
+  .wrapper {flex-direction: row;  }
       
-  .side {    
+  .about {    
     display:block;
-    flex: 30%;}
+    flex: 30%;
+  padding:0;}
 
-  .navbar {
-    display: flex;
-  } 
+  .navbar {display: flex;} 
 
-  .test1 p {margin-bottom: 20px;}
-  .slideshow-container {flex: 40%;}} 
+  .section1 p {margin-bottom: 20px;}
+  .slideshow-container {flex: 40%;}
+} 
 
 
 
   /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .main {flex: 30%;}}
+  .main {flex: 30%;}
+  .wrapper {width: 90%;
+  margin: auto;}}
 
 @media only screen and (orientation: landscape) {}

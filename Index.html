@@ -5,41 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./styles/used.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
   </head>
 
-  <body>
+  <body class="mybody">
     <!-- Note, hidden in mobile devices-->
     <div class="note">Plants World</div>
 
-    <!-- Navigation Bar, only navbar class -->
+    <!-- Navigation Bar, has only navbar class -->
     <div class="navbar">
       <a class="name">Plants World</li>
-      <a href="#">Contact Us</a>
+      <a href="#contactInfo">Contact Us</a>
       <a href="#">Our Products</a>
       <a href="#">Link</a>
       <a href="https://www.facebook.com/planti.wrld.3" target="_blank">Facebook</a>
     </div>
-
-  
-   
+<!--  -->
     <!-- Header, dos NOT have any special style -->
     <div class="header">
-      <div>Welcome to our store where every thing is about <b>Golden Ivy Plant</b>. 
-          We love this cute plant and have just started, we hope you support us so we can expand our products.</div>
+      Welcome to our store where every thing is about <b>Golden Ivy Plant</b>. 
+      We love this cute plant and have just started producing it, we hope you support us so we can expand our products.
     </div>
-
+    
     <!-- The flexible grid (content), row class flex with wrap -->
-    <div class="wrapper" style="background-color: rgb(210, 231, 88);">
-      <div class="side" style="background-color:greenyellow;">
-        
-        <div class="test1">
+    <div class="wrapper" >
+      <div class="about" > 
+        <div class="section1">
           <h2>About our store</h2>
           <p>We propogate, grow, and sell Golden Ivy. It is a nice plant that stay green all year long, it needs minumum care and can survive almost in all environments.</p>
-          <div class="fakeimg"><img src="./images/l_Wind.jpg"></div>
-          </div>
+          <div class="aboutimg"><img src="./images/l_Wind.jpg"></div>
+        </div>
 
-        <div class="test2">
-          <p>The plant has a multitude of common names. It is also called devil's vine or devil's ivy because it is almost impossible to kill and it stays green even when kept in the dark. They're resistant to insects and disease, and are fast growing and vigorous. </p>
+        <div class="section2">
           <h2>Care Information</h2>
           <ul>
             <li>Height: Up to 40 feet.</li>
@@ -48,36 +46,24 @@
             <li>Temp:   60-80°F.</li>
             <li>Humidity: Average-high.</li>
             <li>Height: Up to 40 feet.</li>
-
           </ul>
-          <!-- <div class="fakeimg" style="height:60px;">Image</div><br>
-          <div class="fakeimg" style="height:60px;">Image</div><br>
-          <div class="fakeimg" style="height:60px;">Image</div> -->
+
+          <p>The plant has a multitude of common names. It is also called devil's vine or devil's ivy because it is almost impossible to kill and it stays green even when kept in the dark. They're resistant to insects and disease, and are fast growing and vigorous. </p>
         </div>
       </div>
 
       <div class="slideshow-container" > <!-- This is slideshow-container -->
-        
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="mySlides imgFade">
+          <div><button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <span class="numbertext"></span>
+            <button class="next" onclick="plusSlides(1)">&#10095;</button>
+          </div>
+          <img src="">
+        </div>
 
-        <div class="mySlides fade"> <!-- 1st Image  -->
-          <div class="numbertext">1 / 3</div>
-          <img src="./images/s_1.jpg">
-          <!-- <div class="caption">Caption Text</div> -->
-        </div>
-        <div class="mySlides fade">  <!-- 2nd Image  -->
-          <div class="numbertext">2 / 3</div>
-          <img src="./images/s_2.jpg">
-          <!-- <div class="caption">Caption Two</div> -->
-        </div>
-        <div class="mySlides fade">
-          <!-- 3rd Image  -->
-          <div class="numbertext">3 / 3</div>
-          <img src="./images/s_3.jpg">
-          
-        </div>
-        <div class="caption">Caption One</div>
+        <!-- <div class="imgCaption">imgCaption Text</div>-->
+        <div class="imgCaption"></div>
+
         <div class="dotContainer"><!-- Dots DIV  -->
           <span class="dot" onclick="currentSlide(1)"></span>
           <span class="dot" onclick="currentSlide(2)"></span>
@@ -91,16 +77,14 @@
         <h5>Title description, Dec 7, 2017</h5>
 
         
-        <div class="fakeimg" style="height:200px;">Image</div>
+        <div class="aboutimg" style="height:200px;">Image</div>
         <p>Some text..</p>
         <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
         <br> -->
 
-
-
-        <!-- <h2>TITLE HEADING 2</h2>
+      <!-- <h2>TITLE HEADING 2</h2>
         <h5>Title description, Sep 2, 2017</h5>
-        <div class="fakeimg" style="height:200px;">Image</div>
+        <div class="aboutimg" style="height:200px;">Image</div>
         <p>Some text..</p>
         <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> -->
       </div>
@@ -108,7 +92,12 @@
 
     <!-- Footer -->
     <div class="footer">
-      <h2>Footer</h2>
+      <h4 id="contactInfo">Contact us</h4>
+      <ul class="footList">
+          <li>Phone number: <span>&#9742;</span> <a href="tel:+123456789"></a>+1(012)3456-789</li>
+          <li>Facebook <a href="https://www.facebook.com/planti.wrld.3" target="_blank" class="fa fa-facebook"></a></li>
+          <li>Email Address: <i class="glyphicon glyphicon-envelope"> </i><a href="mailto:webmaster@example.com"> plantwrld@gmail.com</a></li>
+      </ul>
     </div>
     <script src="./scripts/scripts.js"></script>
   </body>
