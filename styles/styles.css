@@ -1,61 +1,325 @@
-/* General styles*/
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-
-
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-/* Flex container styles*/
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  
-  background-color: DodgerBlue;
-  border-bottom-style: solid;
-  height: 200px;
-  flex-flow: row wrap; /* Need to check effect*/
+* {
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  margin: 0;
 }
 
+/* Style the body */
+.mybody {
+  font-family: Arial 1em;
+  margin: 0;
+  background-color: rgb(164, 180, 107);
+}
 
-.flex-container > div {
-  background-color: red;
-  margin: auto;
-  border: 1px solid;
+.note {
+    background:yellow;
+    font-size: 18px;;
+    padding:5px;
+    text-align:center; 
+    border: 1px solid;
+}
+
+/* Style the top navigation bar */
+.myNavbar {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    background-color: #333;
+    margin-top: 0px;
+    z-index: 3;
+} 
+
+  /* Style the navigation bar links */
+.myNavbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.myNavbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.myNavbar a:visited { 
+  color: white;
+}
+.name {display: none;}
+
+  /* Header/logo Title */
+.header {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background: #0f9c80;
+    width: 90%;
+    margin: auto;
+}
+  
+  /* Column container */
+.wrapper {  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px 20px;
+} 
+
+.section1 {padding:0 ;}
+
+.section2 p {margin: 10px 0;}
+
+/* Create two unequal columns that sits next to each other */
+
+/* aboutbar/left column */
+.about {
+  padding: 10px 10px;
+  width: 100%
+}
+
+.mySlides {text-align:center;}
+
+img {
+    /* vertical-align: middle; */
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+    padding: 5px 5px;
+    object-fit:cover;
+  }
+
+/* Fake image, just for this example */
+.aboutimg {
+  width: 100%;
+  padding: 0px;
+}
+
+ /* imgCaption text for images*/
+ .imgCaption {
+  color: #f2f2f2;
+  font-size: 1em;
+  padding: 8px 12px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+} 
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  top: -50%;
+  position: relative;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 2;
+}
+
+/* Position the "next button" to the right */
+/* .next {
+  right: -93%;
+  border-radius: 3px 0 0 3px;} */
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  font-size: 1.6em;
+  padding: 20px 12px 5px;
+  color: #f2f2f2;
+  position: relative;
+  top: 0;
+}
+
+.dotContainer {
+  text-align:center; 
+  padding-top:10px; 
+  /* border: 1px solid black; */
+  bottom: 10px; 
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.imgFade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: #ddd;}
+
+  .footList {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+
+  }
+
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+  }
+  /* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+  
+
+/* --------------------------------------------------------------------- Media Queries  */
+  /* 1 On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next, .text, .myNavbar, .note, .name {font-size: 10px}
+    .wrapper {padding: 5px 0;}
+    .aboutimg {padding: 0;}
+    .section1 h2, .section2 h2 {font-size: 1.2em;}
+    /* .header {padding: 10px;} */
+    .dot {margin: 0 5px;}
+  }
+
+/* 2 Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .note {display:none;}
+  .myNavbar {
+    flex-direction: row;
+    top: 10px;
+    margin-bottom: 20px;
+    position: sticky;
+    justify-content: space-evenly;
+  }
+
+  .about {width: 100%;}
+
+  .header {font-size: 1.2em;}
+
+  .section1 p, .section2 p {
+    font-size: 1.2em;  
+  }
+
+  .imgCaption {
+    font-size: 1.5em;
+    padding: 15px 12px 20px;
+  }
+} 
+
+/* 3 Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+  .mySlides img {
+    width: 80%;
+  }
+
+  .about {
+    display: flex;
+    padding-right: 20px;
+    padding-left: 0;  
+  }
+  
+  .section1 {
+  flex: 60%;
   padding: 20px;
+  }
 
-}
+  .section2 {
+  flex: 40%;
+  padding: 20px;
+  }
+
+  .numbertext {
+  font-size: 1.5em;
+  padding: 20px 12px 5px;
+  }
+
+  .imgCaption {
+    font-size: 2em;
+    padding: 15px 12px 20px;
+  }
+
+  .dot {
+    height: 20px;
+    width: 20px;
+    margin: 5px 10px;
+  }
+
+  .name {
+    display: block;
+    margin-right: auto;
+    color: white;
+  }
+} 
 
 
+/* ----- Media queries section -------- */
+/* 4 Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .wrapper {flex-direction: row;  }
+      
+  .about {    
+    display:block;
+    flex: 30%;
+    padding:0;
+  }
 
+  .myNavbar {display: flex;} 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {} 
+  .section1 p {margin-bottom: 20px;}
+  .slideshow-container {flex: 40%;}
+} 
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {} 
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {} 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  
-  background-color: DodgerBlue;
-  border-bottom-style: solid;
-  height: 200px;
-  flex-flow: row wrap; /* Need to check effect*/
-}}
+  .main {flex: 30%;}
 
+  .wrapper {
+    width: 90%;
+    margin: auto;}
+  }
 
-
+@media only screen and (orientation: landscape) {}
